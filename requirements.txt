@@ -1,0 +1,7 @@
+pillow
+numpy
+torch
+paddleocr
+paddlepaddle
+transformers
+gunicorn
