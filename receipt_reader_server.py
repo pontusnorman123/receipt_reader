@@ -21,10 +21,10 @@ logger.setLevel(logging.ERROR)
 
 ocr = PaddleOCR(use_angle_cls=True, lang='sv', det_db_score_mode='slow', rec_db_score_mode='slow',
                 binarize=False, use_dilation=True, use_space_char=True, det_db_unclip_ratio=1.72,
-                rec_model_dir='/mnt/c/School/Exjobb/rec_ppocr_v3_distillation/best_model',
-                det_model_dir='/mnt/c/School/Exjobb/det_model/content/PaddleOCR/output/ch_PP-OCR_V3_det/best_model')
-processor = AutoProcessor.from_pretrained("/mnt/c/School/Exjobb/LMv3Model", apply_ocr=False)
-model = AutoModelForTokenClassification.from_pretrained("/mnt/c/School/Exjobb/LMv3Model")
+                rec_model_dir='rec_ppocr_v3_distillation/best_model',
+                det_model_dir='det_model/content/PaddleOCR/output/ch_PP-OCR_V3_det/best_model')
+processor = AutoProcessor.from_pretrained("LMv3Model-base", apply_ocr=False)
+model = AutoModelForTokenClassification.from_pretrained("LMv3Model-base")
 
 def process_bbox(box):
     x_coords = [point[0] for point in box]

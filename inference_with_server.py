@@ -5,7 +5,7 @@ import json
 import time
 
 # Directory containing images
-image_folder = '/mnt/c/School/Exjobb/image_folder'
+image_folder = 'image_folder'
 output_data = []
 server_url = 'http://localhost:5000/process'  # Adjust this to your server's address
 
